@@ -2,6 +2,11 @@ PImage background;
 PImage logo;
 PImage score;
 PFont myFont;
+Note [] nt= new Note [100];
+Note_two [] nt_two = new Note_two [50];
+Note_three [] nt_three= new Note_three [100];
+Note_four [] nt_four = new Note_four [100];
+int index=0;
 
 void setup (){
   background= loadImage("background1.jpg");
@@ -16,12 +21,22 @@ void setup (){
  myFont= createFont("Stencil", 30);
  textFont(myFont);
 
-
+nt[0]= new Note();
+nt_two [0] = new Note_two();
+nt_three[0]=new Note_three();
+nt_four [0] = new Note_four();
   
 }
 
 void draw(){
   background(background);
+  
+//  for (int i =0; i <=index; i++) {
+//    
+//    nt[i].display();
+//      nt[i].drop();
+//    
+//  }
   //logo
   fill(255);
   stroke(0);
@@ -73,4 +88,24 @@ strokeWeight(29);
 line(width/2-140,0,width/2-140,height-95);
 line(width/2+140,0,width/2+140,height-95);
 
+
+ for (int i =0; i <=index; i++) {
+   
+    nt[i].display();
+      nt[i].drop();
+      nt[i].check();
+      
+      nt_two[i].display();
+      nt_two[i].drop();
+      nt_two[i].check();
+    
+      nt_three[i].display();
+      nt_three[i].drop();
+      nt_three[i].check();
+      
+       nt_four[i].display();
+      nt_four[i].drop();
+      nt_four[i].check();
+    
+  }
 }
