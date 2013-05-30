@@ -8,7 +8,7 @@ class Note_four{
     x=width/2+95;
     y=-d/2;
     d=35;
-    speed = 7;
+    speed = 3.75;
   }
   void display() {
     noStroke();
@@ -20,8 +20,13 @@ class Note_four{
     y+=speed;
   }
   void check(){
-    if(y>455 && y<535){
-      print("TOUCH!");
+    if(y>465 && y<530){
+      if(keyPressed){
+        if(key=='f'){
+          print("Touch!");
+          y=height*2;
+        }
+      }
     }
   }
 }

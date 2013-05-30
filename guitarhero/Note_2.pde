@@ -21,8 +21,13 @@ class Note_two {
   }
   
   void check(){
-    if(y>455 && y<535){
-      print("TOUCH!");
+   if(y>465 && y<530){
+      if(keyPressed){
+        if(key=='s'){
+          print("Touch!");
+          y=height*2;
+        }
+      }
     }
   }
 }

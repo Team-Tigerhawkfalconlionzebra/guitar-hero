@@ -8,7 +8,7 @@ class Note {
     x=width/2-100;
     y=-d/2;
     d=35;
-    speed = random(2, 7);
+    speed = 3;
   }
   void display() {
     noStroke();
@@ -20,8 +20,14 @@ class Note {
     y+=speed;
   }
   void check(){
-    if(y>455 && y<535){
-      print("TOUCH!");
+    if(y>465 && y<530){
+      if(keyPressed){
+        if(key=='a'){
+          print("Touch!");
+          y=height*2;
+        }
+      }
     }
   }
+  
 }
