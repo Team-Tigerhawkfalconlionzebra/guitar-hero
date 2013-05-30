@@ -8,7 +8,7 @@ class Note_four{
     x=width/2+95;
     y=-d/2;
     d=35;
-    speed = 5;
+    speed = 7;
   }
   void display() {
     noStroke();
