@@ -67,6 +67,15 @@ void draw() {
   fill(0);
   textSize(40);
   text(points,100,460);
+  
+//instructions
+fill(0);
+rect(640,440,300,100);
+textSize(13);
+fill(250,250,250);
+text("INSTRUCTIONS: Press 'A' for Red Note",640,460);
+text("'S' for Yellow Note",640,480);
+text("'D' for Green Note, and 'F' for Blue Note",640,500);
 
   //guitarboard
   fill(0, 140);
@@ -164,8 +173,8 @@ time.update();
      index++;
     clock++;
     //amount of time the game will last
-    if(clock>=10){
-      clock=10;
+    if(clock>=137){
+      clock=137;
       fill(0);
       rect(0,0,952,535);
       fill(255);
