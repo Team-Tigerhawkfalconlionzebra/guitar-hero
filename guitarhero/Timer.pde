@@ -1,3 +1,4 @@
+boolean gameover =false;
 class Timer {
   int time;
   int currentTime;
